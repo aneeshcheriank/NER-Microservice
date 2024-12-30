@@ -1,0 +1,10 @@
+black
+lint
+pytest
+pytest-cov
+httpx
+
+fastapi
+uvicorn
+spacy
+pydantic >= 2.0
