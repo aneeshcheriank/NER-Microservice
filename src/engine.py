@@ -10,6 +10,8 @@ def entity_recognition(text):
         if ent.label_ not in entities:
             entities[ent.label_] = [ent.text]
         else:
-            entities[ent.label_].append(ent.text)
+            # need to check the label is already in the list
+            if ent.text not in entities[ent.label_]:
+                entities[ent.label_].append(ent.text)
 
     return entities

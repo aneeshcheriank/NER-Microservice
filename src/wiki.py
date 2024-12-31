@@ -26,6 +26,12 @@ def get_wiki_suggetion(query):
 
     page = wikipedia.suggest(query)
 
+    if page is None:
+        search = wikipedia.search(query)
+
+        if len(search) > 0:
+            page = search[0]
+    
     return page
 
 def search_wiki(query):
