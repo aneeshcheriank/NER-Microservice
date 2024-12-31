@@ -3,8 +3,8 @@ Extract entties from wikipedia articles
 """
 import json
 
-from wiki import search_wiki
-from engine import entity_recognition
+from .wiki import search_wiki
+from .engine import entity_recognition
 
 def ner(page, do_print=False):
     """
