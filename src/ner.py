@@ -31,7 +31,8 @@ def write_json(data, filename="output.json"):
 
 def do_ner(query, output_path="output/output.json", do_print=True):
     entities = ner(query, do_print=do_print)
-    write_json(entities)
+    write_json(entities, filename = output_path)
+    return entities
 
 
 if __name__ == "__main__":
