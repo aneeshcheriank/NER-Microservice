@@ -1,5 +1,5 @@
 from fastapi.testclient import TestClient
-from app import app  # Replace 'your_app_module' with the actual module name where your FastAPI app is defined
+from app import app  
 import pytest
 
 client = TestClient(app)
@@ -14,7 +14,6 @@ def test_ner():
     text_to_test = "John Doe works at Acme Corp in New York."
     response = client.get(f"/ner/{text_to_test}")
     assert response.status_code == 200
-    # Replace the expected response with the actual expected output from your entity_recognition function
     expected_response = {
         "PERSON": ["John Doe"],
         "ORG": ["Acme Corp"],
