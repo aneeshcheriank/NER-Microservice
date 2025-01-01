@@ -1,6 +1,10 @@
 [![Python application test with GitHub Actions](https://github.com/aneeshcheriank/NER-Microservice/actions/workflows/makefile.yml/badge.svg)](https://github.com/aneeshcheriank/NER-Microservice/actions/workflows/makefile.yml)
 # NER-Microservice
 NER microservice template
+  - Spacy ner 
+  - wikipedia page
+  - extract entity and return the entities
+
 
 ## Docker commands
 - `docker build . -t <tag_name>`
@@ -19,6 +23,7 @@ NER microservice template
 - `-v /path/to/host/directory:/host_data`
 - Mounts a host directory (/path/to/host/directory) into the container as /host_data to store the copied file.
 - `docker run -p 127.0.0.1:8080:8080 -v ./output:/output <image_id>`
+
 ### command to run
 - `docker build . -t latest`
 - `docker run -p 127.0.0.1:8080:8080 -v ./output:/app/output latest`
