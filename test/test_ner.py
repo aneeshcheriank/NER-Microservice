@@ -1,13 +1,11 @@
 import json
 import pytest
-from src.ner import ner, write_json 
+from src.ner import ner, write_json
 
 # Mock data
 MOCK_CONTENT = "Benjamin Netanyahu is an Israeli politician."
-MOCK_ENTITIES = {
-    "PERSON": ["Benjamin Netanyahu"],
-    "NORP": ["Israeli"]
-}
+MOCK_ENTITIES = {"PERSON": ["Benjamin Netanyahu"], "NORP": ["Israeli"]}
+
 
 # Test `ner` function
 @pytest.mark.skip(reason="Need to troubleshoot")
@@ -15,6 +13,7 @@ def test_ner(monkeypatch, capsys):
     """
     Test the ner function.
     """
+
     # Mock the search_wiki and entity_recognition functions
     def mock_search_wiki(query):
         assert query == "Benjamin Netanyahu"
@@ -30,13 +29,14 @@ def test_ner(monkeypatch, capsys):
 
     # Act
     entities = ner("Benjamin Netanyahu", do_print=False)
-    
+
     # Capture printed output
     captured = capsys.readouterr()
 
     # Assert
     assert entities == MOCK_ENTITIES
     assert json.dumps(MOCK_ENTITIES, indent=2) in captured.out
+
 
 # Test `write_json` function
 def test_write_json(monkeypatch, tmp_path):

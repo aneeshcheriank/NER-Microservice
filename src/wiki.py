@@ -4,6 +4,7 @@ The module is to extact content from wikipedia and to supply to the ner module t
 
 import wikipedia
 
+
 def get_wiki_content(page):
     """
     Exract content of a given page
@@ -16,6 +17,7 @@ def get_wiki_content(page):
         content = "No content found"
 
     return content
+
 
 def get_wiki_suggetion(query):
     """
@@ -31,8 +33,9 @@ def get_wiki_suggetion(query):
 
         if len(search) > 0:
             page = search[0]
-    
+
     return page
+
 
 def search_wiki(query):
     """
@@ -45,6 +48,7 @@ def search_wiki(query):
     if page is not None:
         return get_wiki_content(page)
     return "No content found"
+
 
 if __name__ == "__main__":
     print(search_wiki("Barak Obama"))
