@@ -1,4 +1,4 @@
-FROM python:3.8-slim-bullseye
+FROM python:3.12-slim
 
 # create an app directory in the container
 RUN mkdir -p /app
