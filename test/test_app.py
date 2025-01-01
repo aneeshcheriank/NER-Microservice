@@ -9,7 +9,7 @@ def test_root():
     assert response.status_code == 200
     assert response.json() == {"message": "Hello World"}
 
-@pytest.mark.skip(reson='changed the app function need to rewirte the test')
+@pytest.mark.skip(reason='changed the app function need to rewirte the test')
 def test_ner():
     text_to_test = "John Doe works at Acme Corp in New York."
     response = client.get(f"/ner/{text_to_test}")
