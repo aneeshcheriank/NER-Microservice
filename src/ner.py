@@ -29,8 +29,8 @@ def write_json(data, filename="output.json"):
         json.dump(data, f, indent=2)
 
 
-def do_ner(query, output_path="output/output.json"):
-    entities = ner(query, do_print=True)
+def do_ner(query, output_path="output/output.json", do_print=True):
+    entities = ner(query, do_print=do_print)
     write_json(entities)
 
 

@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 import uvicorn
 
-from src.ner import ner as entity_recognition
+from src.ner import do_ner as entity_recognition
 
 app = FastAPI()
 
