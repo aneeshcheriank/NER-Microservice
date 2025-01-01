@@ -7,3 +7,9 @@ NER microservice template
 - `docker image ls` # list the docker ids
 - `docker run -p 127.0.0.1:8080:8080 <image_id>`
 - to remove a docker image `docker rmi <image_id>`
+
+## Curl command
+- curl -X 'GET' \
+  'https://ideal-broccoli-5vrjvx6745624vjp-8080.app.github.dev/ner/barak%20obama' \
+  -H 'accept: application/json'
+- need to change the host in this curl command

@@ -13,7 +13,8 @@ WORKDIR /app
 
 # install the dependencies
 RUN pip install --no-cache-dir --upgrade pip &&\
-    pip install --no-cache-dir --trusted-host pypi.python.org -r requirements.txt
+    pip install --no-cache-dir --trusted-host pypi.python.org -r requirements.txt &&\
+    python -m spacy download en_core_web_sm
 
 # Specify the port 
 EXPOSE 8080

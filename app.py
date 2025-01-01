@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 import uvicorn
 
-from src.engine import entity_recognition
+from src.ner import ner as entity_recognition
 
 app = FastAPI()
 
@@ -11,9 +11,9 @@ async def root():
     return {"message": "Hello World"}
 
 
-@app.get("/ner/{text}")
-async def ner(text: str):
-    return entity_recognition(text)
+@app.get("/ner/{query}")
+async def ner(query: str):
+    return entity_recognition(query)
 
 
 if __name__ == "__main__":
