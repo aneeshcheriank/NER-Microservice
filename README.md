@@ -19,3 +19,6 @@ NER microservice template
 - `-v /path/to/host/directory:/host_data`
 - Mounts a host directory (/path/to/host/directory) into the container as /host_data to store the copied file.
 - `docker run -p 127.0.0.1:8080:8080 -v ./output:/output <image_id>`
+### command to run
+- `docker build . -t latest`
+- `docker run -p 127.0.0.1:8080:8080 -v ./output:/app/output latest`
